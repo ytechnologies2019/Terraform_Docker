@@ -5,3 +5,6 @@
 output "container_name" {
     value = var.grafana_name
 }
+output "mount_path" {
+    value = var.mount_path
+}

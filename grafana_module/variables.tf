@@ -3,4 +3,10 @@ variable "grafana_name" {
   default = "grafana"
 }
 
+variable "mount_path" {
+  type = string
+  default = "/var/lib/grafana"
+}
+
+
 
