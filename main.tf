@@ -2,10 +2,6 @@ module "grafana_image" {
   source = "./grafana_module/"
 }
 
-# resource "docker_volume" "grafana_volume" {
-#   name = join ("-", [terraform.workspace , "grafana-vol"])
-# }
-
 resource "docker_container" "grafana" {
   image = module.grafana_image.grafana_image_out
   name  = join ("-", [terraform.workspace , module.grafana_image.container_name])
@@ -69,4 +65,7 @@ resource "docker_container" "influxdb" {
 }
 resource "docker_volume" "influx_vol" {
   name = join ("-", [terraform.workspace , "grafana-vol"])
+  lifecycle {
+    prevent_destroy = true
+  }
 }
