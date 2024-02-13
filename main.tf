@@ -16,9 +16,9 @@ resource "docker_container" "grafana" {
 }
 
 resource "docker_volume" "grafana_vol" {
-  name = join ("-", [terraform.workspace , "grafana-vol"])
+  name = join ("-", [terraform.workspace , "grafana-volume"])
   lifecycle {
-    prevent_destroy = true
+    prevent_destroy = false
   }
 }
 

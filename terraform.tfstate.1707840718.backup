@@ -1,7 +1,7 @@
 {
   "version": 4,
   "terraform_version": "1.6.4",
-  "serial": 143,
+  "serial": 74,
   "lineage": "d1c0a9f4-6594-dea9-722f-600883d74bee",
   "outputs": {
     "grafana_info": {
@@ -9,11 +9,11 @@
       "type": "string"
     },
     "influx_info": {
-      "value": "nodered-\u003e8086",
+      "value": "nodered-\u003e3000",
       "type": "string"
     },
     "nodered_info": {
-      "value": "nodered-\u003e1880",
+      "value": "nodered-\u003e3000",
       "type": "string"
     }
   },
@@ -51,8 +51,8 @@
             "group_add": null,
             "healthcheck": null,
             "host": [],
-            "hostname": "e8a469ba1c47",
-            "id": "e8a469ba1c47f096c6fe0731184aa745b5611a2eabfb885f1663217ac1e13a55",
+            "hostname": "1045f980c95b",
+            "id": "1045f980c95b058465f2ec6d0754d3e956f89fecb55af7d668e804dafb2ba7a6",
             "image": "sha256:a2a24e91453f89c1b69a70a6b3149169c13db44aebdb7084d20f8047a25dae8c",
             "init": false,
             "ipc_mode": "private",
@@ -71,10 +71,10 @@
                 "gateway": "172.17.0.1",
                 "global_ipv6_address": "",
                 "global_ipv6_prefix_length": 0,
-                "ip_address": "172.17.0.4",
+                "ip_address": "172.17.0.2",
                 "ip_prefix_length": 16,
                 "ipv6_gateway": "",
-                "mac_address": "02:42:ac:11:00:04",
+                "mac_address": "02:42:ac:11:00:02",
                 "network_name": "bridge"
               }
             ],
@@ -110,15 +110,7 @@
             "upload": [],
             "user": "472",
             "userns_mode": "",
-            "volumes": [
-              {
-                "container_path": "/var/lib/grafana",
-                "from_container": "",
-                "host_path": "",
-                "read_only": null,
-                "volume_name": "default-grafana-volume"
-              }
-            ],
+            "volumes": [],
             "wait": false,
             "wait_timeout": 60,
             "working_dir": "/usr/share/grafana"
@@ -126,7 +118,6 @@
           "sensitive_attributes": [],
           "private": "eyJzY2hlbWFfdmVyc2lvbiI6IjIifQ==",
           "dependencies": [
-            "docker_volume.grafana_vol",
             "module.grafana_image.docker_image.grafana"
           ]
         }
@@ -167,8 +158,8 @@
             "group_add": null,
             "healthcheck": null,
             "host": [],
-            "hostname": "cdefb007a30f",
-            "id": "cdefb007a30fa298aea83527aab3d16b76bf6bcc3eaf55563395915d6cab7e12",
+            "hostname": "09add1b0707a",
+            "id": "09add1b0707ab9e75863c1314d6f10c630323e13da45182962443ef68653eb1b",
             "image": "sha256:eec5df16229a7e8f28f51b92c1bdac0988de08fc0cc85732ee5556249eb69b14",
             "init": false,
             "ipc_mode": "private",
@@ -187,10 +178,10 @@
                 "gateway": "172.17.0.1",
                 "global_ipv6_address": "",
                 "global_ipv6_prefix_length": 0,
-                "ip_address": "172.17.0.2",
+                "ip_address": "172.17.0.3",
                 "ip_prefix_length": 16,
                 "ipv6_gateway": "",
-                "mac_address": "02:42:ac:11:00:02",
+                "mac_address": "02:42:ac:11:00:03",
                 "network_name": "bridge"
               }
             ],
@@ -292,8 +283,8 @@
               }
             ],
             "host": [],
-            "hostname": "b41ea4296055",
-            "id": "b41ea42960552d48e26fa45fca2c3035ad3817d91b3244c3dace663615579fff",
+            "hostname": "5e14ce071e61",
+            "id": "5e14ce071e6134b22ae2c08020d53a84364a996386b5be011cfba844d494c476",
             "image": "sha256:780dd4a18c11a9bfde88c6fccfa07a80e1895136df9364fe10ad3813645d2350",
             "init": false,
             "ipc_mode": "private",
@@ -312,10 +303,10 @@
                 "gateway": "172.17.0.1",
                 "global_ipv6_address": "",
                 "global_ipv6_prefix_length": 0,
-                "ip_address": "172.17.0.3",
+                "ip_address": "172.17.0.4",
                 "ip_prefix_length": 16,
                 "ipv6_gateway": "",
-                "mac_address": "02:42:ac:11:00:03",
+                "mac_address": "02:42:ac:11:00:04",
                 "network_name": "bridge"
               }
             ],
@@ -384,10 +375,10 @@
           "attributes": {
             "driver": "local",
             "driver_opts": {},
-            "id": "default-grafana-volume",
+            "id": "default-grafana-vol",
             "labels": [],
-            "mountpoint": "/var/lib/docker/volumes/default-grafana-volume/_data",
-            "name": "default-grafana-volume"
+            "mountpoint": "/var/lib/docker/volumes/default-grafana-vol/_data",
+            "name": "default-grafana-vol"
           },
           "sensitive_attributes": [],
           "private": "eyJzY2hlbWFfdmVyc2lvbiI6IjEifQ=="
